@@ -1,0 +1,942 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clParent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/size_5dp"
+        android:layout_marginBottom="@dimen/size_5dp">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cvPersonalDetails"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/size_10dp"
+            android:layout_marginTop="@dimen/size_20dp"
+            android:layout_marginRight="@dimen/size_10dp"
+            android:layout_marginBottom="@dimen/size_20dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/size_8dp"
+                android:layout_marginTop="@dimen/size_10dp"
+                android:layout_marginRight="@dimen/size_8dp"
+                android:layout_marginBottom="@dimen/size_10dp">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvPersonalDetails"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableRight="@drawable/ic_check_circle_black_24dp"
+                    android:text="@string/personal_details"
+                    android:textColor="@color/color_242c6b"
+                    android:textSize="@dimen/size_16sp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilFirstName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/size_10dp"
+                    android:textColorHint="@color/color_D5D5EE"
+                    app:layout_constraintLeft_toLeftOf="@id/tvPersonalDetails"
+                    app:layout_constraintRight_toRightOf="@id/tvPersonalDetails"
+                    app:layout_constraintTop_toBottomOf="@id/tvPersonalDetails">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/tieFirstName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/edittext_shape"
+                        android:hint="@string/first_Name"
+                        android:imeOptions="actionNext"
+                        android:padding="@dimen/size_10dp"
+                        android:singleLine="true"
+                        android:textColor="@color/color_4855b5" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilLastName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/size_10dp"
+                    android:textColorHint="@color/color_D5D5EE"
+                    app:layout_constraintLeft_toLeftOf="@id/tilFirstName"
+                    app:layout_constraintRight_toRightOf="@id/tilFirstName"
+                    app:layout_constraintTop_toBottomOf="@id/tilFirstName">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/tieLastName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/edittext_shape"
+                        android:hint="@string/last_Name"
+                        android:imeOptions="actionNext"
+                        android:padding="@dimen/size_10dp"
+                        android:singleLine="true"
+                        android:textColor="@color/color_4855b5" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvGender"
+                    android:layout_width="51dp"
+                    android:layout_height="21dp"
+                    android:layout_marginTop="@dimen/size_10dp"
+                    android:text="@string/gender"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="@dimen/size_16sp"
+                    app:layout_constraintLeft_toLeftOf="@id/tilLastName"
+                    app:layout_constraintTop_toBottomOf="@id/tilLastName" />
+
+                <RadioGroup
+                    android:id="@+id/rgPersonalDetails"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layout_constraintLeft_toLeftOf="@id/tvGender"
+                    app:layout_constraintTop_toBottomOf="@id/tvGender">
+
+                    <androidx.appcompat.widget.AppCompatRadioButton
+                        android:id="@+id/rbMale"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/size_10dp"
+                        android:buttonTint="@color/color_4855b5"
+                        android:checked="false"
+                        android:text="@string/male"
+                        android:textColor="@color/color_4855b5"
+                        android:textSize="@dimen/size_16sp"
+                        android:textStyle="bold"
+                        app:layout_constraintLeft_toLeftOf="@id/tvGender"
+                        app:layout_constraintTop_toBottomOf="@id/tvGender" />
+
+                    <androidx.appcompat.widget.AppCompatRadioButton
+                        android:id="@+id/rbFemale"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/size_10dp"
+                        android:layout_marginTop="@dimen/size_10dp"
+                        android:buttonTint="@color/color_4855b5"
+                        android:text="@string/female"
+                        android:textColor="@color/color_4855b5"
+                        android:textSize="@dimen/size_16sp"
+                        android:textStyle="bold"
+                        app:layout_constraintLeft_toRightOf="@id/rbMale"
+                        app:layout_constraintTop_toBottomOf="@id/tvGender" />
+
+                    <androidx.appcompat.widget.AppCompatRadioButton
+                        android:id="@+id/rbOthers"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/size_10dp"
+                        android:layout_marginTop="@dimen/size_10dp"
+                        android:buttonTint="@color/color_4855b5"
+                        android:checked="false"
+                        android:text="@string/others"
+                        android:textColor="@color/color_4855b5"
+                        android:textSize="@dimen/size_16sp"
+                        android:textStyle="bold"
+                        app:layout_constraintLeft_toRightOf="@id/rbFemale"
+                        app:layout_constraintTop_toBottomOf="@id/tvGender" />
+
+                </RadioGroup>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilDOB"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/size_10dp"
+                    android:textColorHint="@color/color_D5D5EE"
+                    app:layout_constraintLeft_toLeftOf="@id/rgPersonalDetails"
+                    app:layout_constraintRight_toRightOf="@id/rgPersonalDetails"
+                    app:layout_constraintTop_toBottomOf="@id/rgPersonalDetails">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/tieDOB"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/edittext_shape"
+                        android:hint="@string/dob"
+                        android:imeOptions="actionNext"
+                        android:padding="@dimen/size_10dp"
+                        android:singleLine="true"
+                        android:textColor="@color/color_4855b5" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvPhotos"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/size_10dp"
+                    android:text="@string/photos"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="@dimen/size_16sp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tilDOB" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ivProfilePhoto"
+                    android:layout_width="159dp"
+                    android:layout_height="171dp"
+                    android:layout_marginTop="@dimen/size_10dp"
+                    android:src="@drawable/profile_photo"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvPhotos" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ivCheckWrong"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/size_15dp"
+                    android:src="@drawable/ic_delete_user_profile_pic_copy"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tilDOB" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+
+        <!-- Card Professional Details -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cvProfessionalDetails"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/size_10dp"
+            android:layout_marginTop="@dimen/size_20dp"
+            android:layout_marginRight="@dimen/size_10dp"
+            android:layout_marginBottom="@dimen/size_20dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cvPersonalDetails">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/clProfessionalDetails"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/size_8dp"
+                android:layout_marginTop="@dimen/size_10dp"
+                android:layout_marginRight="@dimen/size_8dp"
+                android:layout_marginBottom="@dimen/size_10dp">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvProfessionalDetails"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableRight="@drawable/ic_check_circle_black_24dp"
+                    android:text="@string/professional_details"
+                    android:textColor="@color/color_242c6b"
+                    android:textSize="@dimen/size_16sp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilDesignation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/size_10dp"
+                    android:textColorHint="@color/color_D5D5EE"
+                    app:layout_constraintLeft_toLeftOf="@id/tvProfessionalDetails"
+                    app:layout_constraintRight_toRightOf="@id/tvProfessionalDetails"
+                    app:layout_constraintTop_toBottomOf="@id/tvProfessionalDetails">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/tieDesignation"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/edittext_shape"
+                        android:hint="@string/desired_designation"
+                        android:imeOptions="actionNext"
+                        android:padding="@dimen/size_10dp"
+                        android:singleLine="true"
+                        android:textColor="@color/color_4855b5" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilPayRate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/size_10dp"
+                    android:textColorHint="@color/color_D5D5EE"
+                    app:layout_constraintLeft_toLeftOf="@id/tilDesignation"
+                    app:layout_constraintRight_toRightOf="@id/tilDesignation"
+                    app:layout_constraintTop_toBottomOf="@id/tilDesignation">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/tiePayRate"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/edittext_shape"
+                        android:hint="@string/expected_Pay_Rate"
+                        android:imeOptions="actionNext"
+                        android:padding="@dimen/size_10dp"
+                        android:singleLine="true"
+                        android:textColor="@color/color_4855b5" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilPreferredLocations"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/size_10dp"
+                    android:textColorHint="@color/color_D5D5EE"
+                    app:layout_constraintLeft_toLeftOf="@id/tilPayRate"
+                    app:layout_constraintRight_toRightOf="@id/tilPayRate"
+                    app:layout_constraintTop_toBottomOf="@id/tilPayRate">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/tiePreferredLocations"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/edittext_shape"
+                        android:hint="@string/preferred_Locations"
+                        android:imeOptions="actionNext"
+                        android:padding="@dimen/size_10dp"
+                        android:singleLine="true"
+                        android:textColor="@color/color_4855b5" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilWorkPermit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/size_10dp"
+                    android:textColorHint="@color/color_D5D5EE"
+                    app:layout_constraintLeft_toLeftOf="@id/tilPreferredLocations"
+                    app:layout_constraintRight_toRightOf="@id/tilPreferredLocations"
+                    app:layout_constraintTop_toBottomOf="@id/tilPreferredLocations">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/tieWorkPermit"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/edittext_shape"
+                        android:hint="@string/work_permit_status_for_usa"
+                        android:imeOptions="actionNext"
+                        android:padding="@dimen/size_10dp"
+                        android:singleLine="true"
+                        android:textColor="@color/color_4855b5" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvPreferredJobType"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/size_10dp"
+                    android:text="@string/preferred_job_type"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="@dimen/size_16sp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tilWorkPermit" />
+
+                <RadioGroup
+                    android:id="@+id/rgProfessionalDetails"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvPreferredJobType">
+
+                    <androidx.appcompat.widget.AppCompatRadioButton
+                        android:id="@+id/rbFullTime"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/size_10dp"
+                        android:buttonTint="@color/color_4855b5"
+                        android:checked="false"
+                        android:text="@string/full_time"
+                        android:textColor="@color/color_4855b5"
+                        android:textSize="@dimen/size_16sp"
+                        android:textStyle="bold"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tvPreferredJobType" />
+
+                    <androidx.appcompat.widget.AppCompatRadioButton
+                        android:id="@+id/rbContract"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/size_10dp"
+                        android:layout_marginTop="@dimen/size_10dp"
+                        android:buttonTint="@color/color_4855b5"
+                        android:text="@string/contract"
+                        android:textColor="@color/color_4855b5"
+                        android:textSize="@dimen/size_16sp"
+                        android:textStyle="bold"
+                        app:layout_constraintLeft_toRightOf="@id/rbFullTime"
+                        app:layout_constraintTop_toBottomOf="@id/tvPreferredJobType" />
+
+                    <androidx.appcompat.widget.AppCompatRadioButton
+                        android:id="@+id/rbBoth"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/size_10dp"
+                        android:layout_marginTop="@dimen/size_10dp"
+                        android:buttonTint="@color/color_4855b5"
+                        android:checked="false"
+                        android:text="@string/both"
+                        android:textColor="@color/color_4855b5"
+                        android:textSize="@dimen/size_16sp"
+                        android:textStyle="bold"
+                        app:layout_constraintLeft_toRightOf="@id/rbContract"
+                        app:layout_constraintTop_toBottomOf="@id/tvPreferredJobType" />
+
+                </RadioGroup>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+
+        <!-- Social Links -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cvSocialLinks"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/size_10dp"
+            android:layout_marginTop="@dimen/size_20dp"
+            android:layout_marginRight="@dimen/size_10dp"
+            android:layout_marginBottom="@dimen/size_20dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cvProfessionalDetails">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/clSocialLinks"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/size_8dp"
+                android:layout_marginTop="@dimen/size_10dp"
+                android:layout_marginRight="@dimen/size_8dp"
+                android:layout_marginBottom="@dimen/size_10dp">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvSocialLinks"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableRight="@drawable/ic_check_circle_black_24dp"
+                    android:text="@string/social_links"
+                    android:textColor="@color/color_242c6b"
+                    android:textSize="@dimen/size_16sp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilLinkedin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/size_10dp"
+                    android:textColorHint="@color/color_D5D5EE"
+                    app:layout_constraintLeft_toLeftOf="@id/tvSocialLinks"
+                    app:layout_constraintRight_toRightOf="@id/tvSocialLinks"
+                    app:layout_constraintTop_toBottomOf="@id/tvSocialLinks">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/tieLinkedin"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/edittext_shape"
+                        android:hint="@string/linkedin"
+                        android:imeOptions="actionNext"
+                        android:padding="@dimen/size_10dp"
+                        android:singleLine="true"
+                        android:textColor="@color/color_4855b5" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilGithub"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/size_10dp"
+                    android:textColorHint="@color/color_D5D5EE"
+                    app:layout_constraintLeft_toLeftOf="@id/tilLinkedin"
+                    app:layout_constraintRight_toRightOf="@id/tilLinkedin"
+                    app:layout_constraintTop_toBottomOf="@id/tilLinkedin">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/tieGithub"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/edittext_shape"
+                        android:hint="@string/github"
+                        android:imeOptions="actionNext"
+                        android:padding="@dimen/size_10dp"
+                        android:singleLine="true"
+                        android:textColor="@color/color_4855b5" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilStackOverflow"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/size_10dp"
+                    android:textColorHint="@color/color_D5D5EE"
+                    app:layout_constraintLeft_toLeftOf="@id/tilGithub"
+                    app:layout_constraintRight_toRightOf="@id/tilGithub"
+                    app:layout_constraintTop_toBottomOf="@id/tilGithub">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/tieStackOverflow"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/edittext_shape"
+                        android:hint="@string/stack_overFlow"
+                        android:imeOptions="actionNext"
+                        android:padding="@dimen/size_10dp"
+                        android:singleLine="true"
+                        android:textColor="@color/color_4855b5" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilOthers"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/size_10dp"
+                    android:textColorHint="@color/color_D5D5EE"
+                    app:layout_constraintLeft_toLeftOf="@id/tilStackOverflow"
+                    app:layout_constraintRight_toRightOf="@id/tilStackOverflow"
+                    app:layout_constraintTop_toBottomOf="@id/tilStackOverflow">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/tieOthers"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/edittext_shape"
+                        android:hint="@string/others_social_link"
+                        android:imeOptions="actionNext"
+                        android:padding="@dimen/size_10dp"
+                        android:singleLine="true"
+                        android:textColor="@color/color_4855b5" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+
+        <!-- Video Profile-->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cvVideoProfile"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/size_10dp"
+            android:layout_marginTop="@dimen/size_20dp"
+            android:layout_marginRight="@dimen/size_10dp"
+            android:layout_marginBottom="@dimen/size_20dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cvSocialLinks">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/ciVideoProfile"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/size_8dp"
+                android:layout_marginTop="@dimen/size_10dp"
+                android:layout_marginRight="@dimen/size_8dp"
+                android:layout_marginBottom="@dimen/size_10dp">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvVideoProfile"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableRight="@drawable/ic_check_circle_black_24dp"
+                    android:text="@string/video_profile"
+                    android:textColor="@color/color_242c6b"
+                    android:textSize="@dimen/size_16sp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvVideoType"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/size_10dp"
+                    android:layout_marginTop="@dimen/size_20dp"
+                    android:text="@string/video_type"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="@dimen/size_16sp"
+                    app:layout_constraintLeft_toLeftOf="@id/tvVideoProfile"
+                    app:layout_constraintTop_toBottomOf="@id/tvVideoProfile" />
+
+                <RadioGroup
+                    android:id="@+id/rgVideoProfile"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layout_constraintLeft_toLeftOf="@id/tvVideoType"
+                    app:layout_constraintTop_toBottomOf="@id/tvVideoType">
+
+                    <androidx.appcompat.widget.AppCompatRadioButton
+                        android:id="@+id/rbYoutube"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/size_15dp"
+                        android:buttonTint="@color/color_4855b5"
+                        android:text="@string/youtube"
+                        android:textColor="@color/color_4855b5"
+                        android:textSize="@dimen/size_16sp"
+                        android:textStyle="bold"
+                        app:layout_constraintLeft_toLeftOf="@id/tvVideoType"
+                        app:layout_constraintTop_toBottomOf="@id/tvVideoType" />
+
+                    <androidx.appcompat.widget.AppCompatRadioButton
+                        android:id="@+id/rbUpload"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/size_10dp"
+                        android:layout_marginTop="@dimen/size_15dp"
+                        android:buttonTint="@color/color_4855b5"
+                        android:text="@string/upload"
+                        android:textColor="@color/color_4855b5"
+                        android:textSize="@dimen/size_16sp"
+                        android:textStyle="bold"
+                        app:layout_constraintLeft_toRightOf="@id/rbYoutube"
+                        app:layout_constraintTop_toBottomOf="@id/tvVideoType" />
+
+                </RadioGroup>
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilUrl"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/size_10dp"
+                    android:textColorHint="@color/color_D5D5EE"
+                    app:layout_constraintLeft_toLeftOf="@id/rgVideoProfile"
+                    app:layout_constraintRight_toRightOf="@id/rgVideoProfile"
+                    app:layout_constraintTop_toBottomOf="@id/rgVideoProfile">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/tieUrl"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/edittext_shape"
+                        android:hint="@string/url"
+                        android:imeOptions="actionNext"
+                        android:padding="@dimen/size_10dp"
+                        android:singleLine="true"
+                        android:textColor="@color/color_4855b5" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+
+        <!-- First References-->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cvReferences"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/size_10dp"
+            android:layout_marginTop="@dimen/size_20dp"
+            android:layout_marginRight="@dimen/size_10dp"
+            android:layout_marginBottom="@dimen/size_20dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cvVideoProfile">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/ciReferences"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/size_8dp"
+                android:layout_marginTop="@dimen/size_10dp"
+                android:layout_marginRight="@dimen/size_8dp"
+                android:layout_marginBottom="@dimen/size_10dp">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvReferences"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableRight="@drawable/ic_check_circle_black_24dp"
+                    android:text="@string/references"
+                    android:textColor="@color/color_242c6b"
+                    android:textSize="@dimen/size_16sp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvFirstReference"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/size_10dp"
+                    android:layout_marginTop="@dimen/size_20dp"
+                    android:text="@string/first_references"
+                    android:textColor="@color/color_4855b5"
+                    android:textSize="@dimen/size_16sp"
+                    app:layout_constraintLeft_toLeftOf="@id/tvReferences"
+                    app:layout_constraintTop_toBottomOf="@id/tvReferences" />
+
+                <View
+                    android:id="@+id/ViewFirstReference"
+                    android:layout_width="@dimen/size_1dp"
+                    android:layout_height="@dimen/size_245dp"
+                    android:layout_marginTop="@dimen/size_20dp"
+                    android:background="@color/color_e6e6fb"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvFirstReference" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilFirstReferenceName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/size_5dp"
+                    android:layout_marginTop="@dimen/size_10dp"
+                    android:textColorHint="@color/color_D5D5EE"
+                    app:layout_constraintLeft_toLeftOf="@id/ViewFirstReference"
+                    app:layout_constraintTop_toBottomOf="@id/tvFirstReference">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/tieFirstReferenceName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/edittext_shape"
+                        android:hint="@string/name"
+                        android:imeOptions="actionNext"
+                        android:padding="@dimen/size_10dp"
+                        android:singleLine="true"
+                        android:textColor="@color/color_4855b5" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilEmailid"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/size_5dp"
+                    android:layout_marginTop="@dimen/size_10dp"
+                    android:textColorHint="@color/color_D5D5EE"
+                    app:layout_constraintLeft_toLeftOf="@id/ViewFirstReference"
+                    app:layout_constraintTop_toBottomOf="@id/tilFirstReferenceName">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etEmail-id"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/edittext_shape"
+                        android:hint="@string/email_id"
+                        android:imeOptions="actionNext"
+                        android:padding="@dimen/size_10dp"
+                        android:singleLine="true"
+                        android:textColor="@color/color_4855b5" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilCapacity"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/size_5dp"
+                    android:layout_marginTop="@dimen/size_10dp"
+                    android:textColorHint="@color/color_D5D5EE"
+                    app:layout_constraintLeft_toLeftOf="@id/ViewFirstReference"
+                    app:layout_constraintTop_toBottomOf="@id/tilEmailid">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/tieCapacity"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/edittext_shape"
+                        android:hint="@string/capacity"
+                        android:imeOptions="actionNext"
+                        android:padding="@dimen/size_10dp"
+                        android:singleLine="true"
+                        android:textColor="@color/color_4855b5" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilPhoneNumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/size_5dp"
+                    android:layout_marginTop="@dimen/size_10dp"
+                    android:textColorHint="@color/color_D5D5EE"
+                    app:layout_constraintLeft_toLeftOf="@id/ViewFirstReference"
+                    app:layout_constraintTop_toBottomOf="@id/tilCapacity">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/tiePhoneNumber"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/edittext_shape"
+                        android:hint="@string/phone_number"
+                        android:imeOptions="actionNext"
+                        android:inputType="number"
+                        android:maxLength="10"
+                        android:padding="@dimen/size_10dp"
+                        android:singleLine="true"
+                        android:textColor="@color/color_4855b5" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <!-- Second Reference-->
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvSecondReference"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/size_10dp"
+                    android:layout_marginTop="@dimen/size_30dp"
+                    android:text="@string/second_references"
+                    android:textColor="@color/color_4855b5"
+                    android:textSize="@dimen/size_16sp"
+                    app:layout_constraintLeft_toLeftOf="@id/tilPhoneNumber"
+                    app:layout_constraintTop_toBottomOf="@id/tilPhoneNumber" />
+
+                <View
+                    android:id="@+id/ViewSecondReference"
+                    android:layout_width="@dimen/size_1dp"
+                    android:layout_height="@dimen/size_245dp"
+                    android:layout_marginTop="@dimen/size_20dp"
+                    android:background="@color/color_e6e6fb"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvSecondReference" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilSecondReferenceName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/size_5dp"
+                    android:layout_marginTop="@dimen/size_10dp"
+                    android:textColorHint="@color/color_D5D5EE"
+                    app:layout_constraintLeft_toLeftOf="@id/ViewSecondReference"
+                    app:layout_constraintTop_toBottomOf="@id/tvSecondReference">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/tieSecondReferenceName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/edittext_shape"
+                        android:hint="@string/name"
+                        android:imeOptions="actionNext"
+                        android:padding="@dimen/size_10dp"
+                        android:singleLine="true"
+                        android:textColor="@color/color_4855b5" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilSecondEmailid"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/size_5dp"
+                    android:layout_marginTop="@dimen/size_10dp"
+                    android:textColorHint="@color/color_D5D5EE"
+                    app:layout_constraintLeft_toLeftOf="@id/ViewSecondReference"
+                    app:layout_constraintTop_toBottomOf="@id/tilSecondReferenceName">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etSecondEmail-id"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/edittext_shape"
+                        android:hint="@string/email_id"
+                        android:imeOptions="actionNext"
+                        android:padding="@dimen/size_10dp"
+                        android:singleLine="true"
+                        android:textColor="@color/color_4855b5" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilSecondCapacity"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/size_5dp"
+                    android:layout_marginTop="@dimen/size_10dp"
+                    android:textColorHint="@color/color_D5D5EE"
+                    app:layout_constraintLeft_toLeftOf="@id/ViewSecondReference"
+                    app:layout_constraintTop_toBottomOf="@id/tilSecondEmailid">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/tieSecondCapacity"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/edittext_shape"
+                        android:hint="@string/capacity"
+                        android:imeOptions="actionNext"
+                        android:padding="@dimen/size_10dp"
+                        android:singleLine="true"
+                        android:textColor="@color/color_4855b5" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilSecondPhoneNumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/size_5dp"
+                    android:layout_marginTop="@dimen/size_10dp"
+                    android:textColorHint="@color/color_D5D5EE"
+                    app:layout_constraintLeft_toLeftOf="@id/ViewSecondReference"
+                    app:layout_constraintTop_toBottomOf="@id/tilSecondCapacity">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/tieSecondPhoneNumber"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/edittext_shape"
+                        android:hint="@string/phone_number"
+                        android:imeOptions="actionDone"
+                        android:inputType="number"
+                        android:maxLength="10"
+                        android:padding="@dimen/size_10dp"
+                        android:singleLine="true"
+                        android:textColor="@color/color_4855b5" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvSubmit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/size_20dp"
+            android:background="@color/color_f9683d"
+            android:gravity="center"
+            android:padding="@dimen/size_15dp"
+            android:text="@string/submit"
+            android:textColor="@color/color_ffffff"
+            android:textSize="@dimen/size_22sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cvReferences" />
+
+
+        <!--   -->
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

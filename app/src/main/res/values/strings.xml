@@ -1,0 +1,40 @@
+<resources>
+    <string name="app_name">Personal</string>
+    <string name="personal_details">Personal Details</string>
+    <string name="first_Name">First Name</string>
+    <string name="last_Name">Last Name</string>
+    <string name="gender">Gender</string>
+    <string name="male">Male</string>
+    <string name="female">Female</string>
+    <string name="others">Others</string>
+    <string name="dob">DOB</string>
+    <string name="photos">Photos</string>
+    <string name="professional_details">Professional Details</string>
+    <string name="desired_designation">Desired Designation</string>
+    <string name="expected_Pay_Rate">Expected Pay Rate</string>
+    <string name="preferred_Locations">Preferred Locations</string>
+    <string name="work_permit_status_for_usa">Work Permit Status For USA</string>
+    <string name="preferred_job_type">Preferred Job Type</string>
+    <string name="full_time">Full Time</string>
+    <string name="contract">Contract</string>
+    <string name="both">Both</string>
+    <string name="social_links">Social Links</string>
+    <string name="linkedin">Linkedin</string>
+    <string name="github">Github</string>
+    <string name="stack_overFlow">Stack OverFlow</string>
+    <string name="others_social_link">Others</string>
+    <string name="video_profile">Video Profile</string>
+    <string name="video_type">Video Type</string>
+    <string name="youtube">Youtube</string>
+    <string name="upload">Upload</string>
+    <string name="url">URL</string>
+    <string name="references">References</string>
+    <string name="first_references">First References</string>
+    <string name="name">Name</string>
+    <string name="email_id">Email id</string>
+    <string name="capacity">Capacity</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="second_references">Second References</string>
+    <string name="submit">Submit</string>
+
+</resources>

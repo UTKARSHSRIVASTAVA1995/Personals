@@ -694,14 +694,6 @@
                     app:layout_constraintLeft_toLeftOf="@id/tvReferences"
                     app:layout_constraintTop_toBottomOf="@id/tvReferences" />
 
-                <View
-                    android:id="@+id/ViewFirstReference"
-                    android:layout_width="@dimen/size_1dp"
-                    android:layout_height="@dimen/size_245dp"
-                    android:layout_marginTop="@dimen/size_20dp"
-                    android:background="@color/color_e6e6fb"
-                    app:layout_constraintLeft_toLeftOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/tvFirstReference" />
 
                 <com.google.android.material.textfield.TextInputLayout
                     android:id="@+id/tilFirstReferenceName"
@@ -710,7 +702,7 @@
                     android:layout_marginLeft="@dimen/size_5dp"
                     android:layout_marginTop="@dimen/size_10dp"
                     android:textColorHint="@color/color_D5D5EE"
-                    app:layout_constraintLeft_toLeftOf="@id/ViewFirstReference"
+                    app:layout_constraintLeft_toLeftOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/tvFirstReference">
 
                     <com.google.android.material.textfield.TextInputEditText
@@ -733,11 +725,11 @@
                     android:layout_marginLeft="@dimen/size_5dp"
                     android:layout_marginTop="@dimen/size_10dp"
                     android:textColorHint="@color/color_D5D5EE"
-                    app:layout_constraintLeft_toLeftOf="@id/ViewFirstReference"
+                    app:layout_constraintLeft_toLeftOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/tilFirstReferenceName">
 
                     <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/etEmail-id"
+                        android:id="@+id/tieFirstEmailid"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:background="@drawable/edittext_shape"
@@ -756,7 +748,7 @@
                     android:layout_marginLeft="@dimen/size_5dp"
                     android:layout_marginTop="@dimen/size_10dp"
                     android:textColorHint="@color/color_D5D5EE"
-                    app:layout_constraintLeft_toLeftOf="@id/ViewFirstReference"
+                    app:layout_constraintLeft_toLeftOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/tilEmailid">
 
                     <com.google.android.material.textfield.TextInputEditText
@@ -779,7 +771,7 @@
                     android:layout_marginLeft="@dimen/size_5dp"
                     android:layout_marginTop="@dimen/size_10dp"
                     android:textColorHint="@color/color_D5D5EE"
-                    app:layout_constraintLeft_toLeftOf="@id/ViewFirstReference"
+                    app:layout_constraintLeft_toLeftOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/tilCapacity">
 
                     <com.google.android.material.textfield.TextInputEditText
@@ -811,14 +803,6 @@
                     app:layout_constraintLeft_toLeftOf="@id/tilPhoneNumber"
                     app:layout_constraintTop_toBottomOf="@id/tilPhoneNumber" />
 
-                <View
-                    android:id="@+id/ViewSecondReference"
-                    android:layout_width="@dimen/size_1dp"
-                    android:layout_height="@dimen/size_245dp"
-                    android:layout_marginTop="@dimen/size_20dp"
-                    android:background="@color/color_e6e6fb"
-                    app:layout_constraintLeft_toLeftOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/tvSecondReference" />
 
                 <com.google.android.material.textfield.TextInputLayout
                     android:id="@+id/tilSecondReferenceName"
@@ -827,7 +811,7 @@
                     android:layout_marginLeft="@dimen/size_5dp"
                     android:layout_marginTop="@dimen/size_10dp"
                     android:textColorHint="@color/color_D5D5EE"
-                    app:layout_constraintLeft_toLeftOf="@id/ViewSecondReference"
+                    app:layout_constraintLeft_toLeftOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/tvSecondReference">
 
                     <com.google.android.material.textfield.TextInputEditText
@@ -850,11 +834,11 @@
                     android:layout_marginLeft="@dimen/size_5dp"
                     android:layout_marginTop="@dimen/size_10dp"
                     android:textColorHint="@color/color_D5D5EE"
-                    app:layout_constraintLeft_toLeftOf="@id/ViewSecondReference"
+                    app:layout_constraintLeft_toLeftOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/tilSecondReferenceName">
 
                     <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/etSecondEmail-id"
+                        android:id="@+id/tieSecondEmailid"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:background="@drawable/edittext_shape"
@@ -873,7 +857,7 @@
                     android:layout_marginLeft="@dimen/size_5dp"
                     android:layout_marginTop="@dimen/size_10dp"
                     android:textColorHint="@color/color_D5D5EE"
-                    app:layout_constraintLeft_toLeftOf="@id/ViewSecondReference"
+                    app:layout_constraintLeft_toLeftOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/tilSecondEmailid">
 
                     <com.google.android.material.textfield.TextInputEditText
@@ -896,7 +880,7 @@
                     android:layout_marginLeft="@dimen/size_5dp"
                     android:layout_marginTop="@dimen/size_10dp"
                     android:textColorHint="@color/color_D5D5EE"
-                    app:layout_constraintLeft_toLeftOf="@id/ViewSecondReference"
+                    app:layout_constraintLeft_toLeftOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/tilSecondCapacity">
 
                     <com.google.android.material.textfield.TextInputEditText
@@ -935,7 +919,7 @@
             app:layout_constraintTop_toBottomOf="@id/cvReferences" />
 
 
-        <!--   -->
+        <!--    -->
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
